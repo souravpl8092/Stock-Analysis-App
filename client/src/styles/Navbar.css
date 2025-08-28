@@ -1,0 +1,89 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 30px;
+  background-color: var(--navbar-bg);
+  color: var(--navbar-text);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.12);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  transition: background-color 0.4s ease, color 0.4s ease, box-shadow 0.4s ease;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Logo Section */
+.navbar-left {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: var(--navbar-text);
+}
+
+/* Right Section */
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 20px;
+  cursor: pointer;
+  color: var(--navbar-text);
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.theme-toggle:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.15);
+}
+
+/* Light and Dark Theme Variables */
+:root {
+  --navbar-bg: #1e3a8a; /* professional blue */
+  --navbar-text: #ffffff;
+}
+
+.dark {
+  --navbar-bg: #1f2937; /* dark gray */
+  --navbar-text: #f3f4f6;
+}
+
+/* Smooth transition for body */
+body {
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    padding: 12px 16px;
+    gap: 10px;
+  }
+
+  .logo {
+    font-size: 22px;
+    text-align: center;
+  }
+
+  .navbar-right {
+    justify-content: center;
+  }
+}

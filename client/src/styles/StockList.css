@@ -1,0 +1,99 @@
+/* Container */
+.stock-list {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+  width: 100%;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+
+/* Stock Card Base */
+.stock-card {
+  flex: 1 1 200px; /* responsive width */
+  max-width: 250px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 16px;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  min-width: 180px;
+}
+
+/* Hover effect */
+.stock-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Dark theme override */
+.stock-list.dark .stock-card {
+  background-color: #1f2937;
+  color: #f3f4f6;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.stock-list.dark .stock-card:hover {
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.5);
+}
+
+/* Stock title */
+.stock-card h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+/* Price & change */
+.stock-card p {
+  font-size: 15px;
+  margin: 4px 0;
+}
+
+/* Positive / Negative */
+.stock-card .positive {
+  color: #10b981; /* green */
+  font-weight: bold;
+}
+
+.stock-card .negative {
+  color: #ef4444; /* red */
+  font-weight: bold;
+}
+
+/* No data / error message */
+.stock-list p {
+  font-size: 16px;
+  font-weight: 500;
+  color: #6b7280; /* gray */
+}
+
+/* Dark theme message */
+.stock-list.dark p {
+  color: #d1d5db;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .stock-card {
+    flex: 1 1 220px;
+  }
+}
+
+@media (max-width: 768px) {
+  .stock-card {
+    flex: 1 1 90%;
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .stock-card {
+    padding: 12px;
+    font-size: 14px;
+  }
+}

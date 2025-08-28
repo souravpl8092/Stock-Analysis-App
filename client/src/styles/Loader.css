@@ -1,0 +1,32 @@
+.loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px; /* adjust height as needed */
+  width: 100%;
+}
+
+.loader {
+  border: 6px solid #e0e0e0; /* light theme background */
+  border-top: 6px solid #2563eb; /* primary color */
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+  transition: border 0.3s ease, border-top 0.3s ease;
+}
+
+/* Dark theme colors */
+.dark .loader {
+  border: 6px solid #4b5563; /* dark grey background */
+  border-top: 6px solid #fbbf24; /* yellow accent for dark theme */
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

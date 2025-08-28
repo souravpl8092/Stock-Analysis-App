@@ -1,0 +1,110 @@
+.stock-card {
+  border-radius: 12px;
+  padding: 16px 20px;
+  margin: 10px;
+  width: 180px;
+  max-width: 100%;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Hover Effect */
+.stock-card:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+/* Card Header */
+.stock-card h3 {
+  font-size: 18px;
+  margin-bottom: 12px;
+  font-weight: 600;
+  transition: color 0.3s ease;
+  word-wrap: break-word;
+}
+
+/* Price */
+.price {
+  font-size: 16px;
+  margin-bottom: 8px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+/* Positive/Negative Change */
+.positive {
+  color: #10b981; /* green */
+  font-weight: bold;
+}
+
+.negative {
+  color: #ef4444; /* red */
+  font-weight: bold;
+}
+
+/* Light Theme */
+.stock-card.light {
+  background-color: #ffffff;
+  color: #111827;
+  border: 1px solid #e5e7eb;
+}
+
+.stock-card.light .price {
+  color: #2563eb;
+}
+
+.stock-card.light .positive {
+  color: #10b981;
+}
+
+.stock-card.light .negative {
+  color: #ef4444;
+}
+
+/* Dark Theme */
+.stock-card.dark {
+  background-color: #1f2937;
+  color: #f3f4f6;
+  border: 1px solid #374151;
+}
+
+.stock-card.dark .price {
+  color: #60a5fa;
+}
+
+.stock-card.dark .positive {
+  color: #22c55e;
+}
+
+.stock-card.dark .negative {
+  color: #f87171;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .stock-card {
+    width: 45%; /* 2 cards per row */
+    padding: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .stock-card {
+    width: 90%; /* 1 card per row */
+    padding: 12px;
+  }
+
+  .stock-card h3 {
+    font-size: 16px;
+  }
+
+  .price {
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,103 @@
+.search-bar {
+  display: flex;
+  width: 90%;
+  max-width: 700px;
+  margin: 20px auto;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+/* Input Styling with Visible Border */
+.search-bar input {
+  flex: 1;
+  padding: 14px 18px;
+  font-size: 16px;
+  border: 1px solid #ccc; /* always visible */
+  outline: none;
+  border-radius: 12px 0 0 12px;
+  transition: all 0.3s ease;
+}
+
+/* Input Focus Outline */
+.search-bar input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.3);
+}
+
+/* Button Styling */
+.search-bar button {
+  padding: 0 20px;
+  font-size: 18px;
+  border: none;
+  border-radius: 0 12px 12px 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Button Hover Effect */
+.search-bar button:hover {
+  transform: scale(1.1);
+}
+
+/* Light Theme */
+.search-bar.light {
+  background: #f9fafb;
+}
+
+.search-bar.light input {
+  background: #ffffff;
+  color: #111827;
+}
+
+.search-bar.light input::placeholder {
+  color: #9ca3af;
+}
+
+.search-bar.light .search-btn {
+  background: #2563eb;
+  color: white;
+}
+
+.search-bar.light .search-btn:hover {
+  background: #1d4ed8;
+}
+
+/* Dark Theme */
+.search-bar.dark {
+  background: #1f2937;
+}
+
+.search-bar.dark input {
+  background: #111827;
+  color: #f3f3f3;
+  border: 1px solid #4b5563; /* visible border in dark mode */
+}
+
+.search-bar.dark input::placeholder {
+  color: #9ca3af;
+}
+
+.search-bar.dark .search-btn {
+  background: #2563eb;
+  color: white;
+}
+
+.search-bar.dark .search-btn:hover {
+  background: #1d4ed8;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .search-bar {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .search-bar input,
+  .search-bar button {
+    width: 100%;
+    border-radius: 12px;
+  }
+}
