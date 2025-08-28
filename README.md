@@ -206,7 +206,7 @@ The frontend will be accessible at `http://localhost:5173`
 
 | **Preview**                                                                                                                                                                       |
 | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| ![Product List](https://cdn.corenexis.com/file/?serve=3114497168.png&token=dd32ce6585fb8480f1f200834b67f583f3a5973d2e80375142a4091674281118.MzExNDQ5NzE2OC5wbmd8MTc1NjQxODM3Ng==) |
+| ![Product List](https://i.ibb.co/gbVpgpfV/Screenshot-2025-08-29-031336.png) |
 
 ---
 
